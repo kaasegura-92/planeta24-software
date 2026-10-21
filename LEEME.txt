@@ -1,0 +1,16 @@
+PLANETA 24 — Aplicación conectada (prueba)
+
+1. Ejecutar 02_venta_producto.sql en Supabase SQL Editor.
+2. Subir index.html a un repositorio GitHub y habilitar GitHub Pages, o publicarlo en un hosting HTTPS.
+3. Abrir el sitio publicado e ingresar con las cuentas creadas en Authentication.
+4. Probar primero con productos y ventas ficticias, verificando que ambas cuentas vean lo mismo.
+
+AVISOS IMPORTANTES:
+- No abrir con file://; publicar en HTTPS.
+- No usar para caja real hasta validar políticas RLS, triggers, controles de concurrencia y operaciones de cierre.
+- La pantalla de resumen carga como máximo 1000 ventas y 1000 gastos recientes: no es un informe contable definitivo.
+- Venta rápida no tiene costo: resultado parcial, no ganancia neta real.
+- Esta versión aún no incluye apertura/cierre de caja ni conciliación de efectivo.
+- El auto-refresco es cada 30 segundos, no actualización instantánea.
+- La clave sb_publishable_ es pública, nunca incorporar service_role ni secret keys.
+- Los permisos RLS de la estructura original permiten UPDATE a administradores. Antes de producción conviene limitar ediciones directas a transacciones y auditar cambios.
