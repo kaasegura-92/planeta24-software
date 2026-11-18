@@ -55,3 +55,17 @@ SELECT schemaname, tablename, policyname, roles, cmd
 FROM pg_policies
 WHERE schemaname = 'public'
 ORDER BY tablename, policyname;
+
+-- 7) Permisos SQL de tabla concedidos a los roles de la API de Supabase.
+SELECT grantee, table_name, privilege_type
+FROM information_schema.role_table_grants
+WHERE table_schema = 'public'
+  AND grantee IN ('anon', 'authenticated', 'service_role')
+ORDER BY table_name, grantee, privilege_type;
+
+-- 8) Permisos de ejecución de las funciones públicas.
+SELECT grantee, routine_name, privilege_type
+FROM information_schema.role_routine_grants
+WHERE specific_schema = 'public'
+  AND grantee IN ('anon', 'authenticated', 'service_role')
+ORDER BY routine_name, grantee, privilege_type;
