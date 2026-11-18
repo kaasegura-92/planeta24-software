@@ -1,5 +1,6 @@
--- BORRADOR: migración incremental TEST V11.9 -> Supabase Original.
--- NO EJECUTAR todavía. Generado desde respaldos del 2026-11-18.
+-- Historial de migración incremental TEST V11.9 -> Supabase Original.
+-- APLICADA en Supabase Original el 2026-11-18 y verificada por la usuaria.
+-- NO VOLVER A EJECUTAR: conserva el paso a paso del cambio aplicado.
 -- Conserva filas de Original; no importa datos de prueba.
 -- Requiere revisión y prueba en una restauración aislada antes de aplicarse.
 -- No ejecutar el dump completo de TEST sobre Original.
